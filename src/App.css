@@ -1,0 +1,20 @@
+/* Layout flow */
+.containers {
+  display: grid;
+  grid-template-columns: 260px repeat(4, 1fr);
+  grid-template-rows: 90px repeat(9, 1fr);
+
+  @apply w-screen;
+}
+
+.sidebar {
+  @apply col-span-1 row-span-10;
+}
+
+.navbar {
+  @apply col-span-4 row-span-1 px-5;
+}
+
+.content {
+  @apply col-start-2 col-span-4 row-span-9 bg-slate-100 p-8;
+}

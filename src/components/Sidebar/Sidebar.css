@@ -1,0 +1,45 @@
+.sidebar {
+  @apply h-screen w-[240px] px-4 py-4 mx-auto bg-white;
+}
+
+.sidebar__header h3 {
+  @apply flex items-center justify-center h-16;
+}
+
+.group-container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  @apply w-full flex flex-col gap-4 text-left;
+}
+
+.group-container::-webkit-scrollbar {
+  display: none;
+}
+
+.group {
+  @apply mb-4;
+}
+
+.group p {
+  @apply text-sm text-gray-500 mb-2;
+}
+
+.group-element {
+  @apply flex flex-col gap-2;
+}
+
+.element {
+  @apply flex items-center gap-3 rounded-md py-3 px-1 hover:bg-blue-500 active:bg-blue-500 hover:text-white active:text-white transition-all;
+}
+
+.element:hover .s-icon {
+  @apply text-white;
+}
+
+.element .s-text {
+  @apply font-semibold;
+}
+
+.element:hover .s-text {
+  @apply text-white;
+}
