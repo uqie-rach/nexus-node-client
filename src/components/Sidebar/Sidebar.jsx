@@ -3,24 +3,30 @@ import { sidebar } from "./Sidebar";
 import { Link } from "react-router-dom";
 
 import "./Sidebar.css";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { AppContext } from "../../utils/context/AppContext";
 
 const Sidebar = () => {
-  const [active, setActive] = useState(window.location.pathname.split("/")[1]);
+  const { sidebarItem, updateSidebarItem } = useContext(AppContext);
 
-  const handleActiveList = (elem) => {
-    setActive(elem.path.split("/")[1]);
+  const handleActiveList = (url) => {
+    const elem = url.path.split("/")[1];
+
+    updateSidebarItem(elem);
   };
 
   const isActive = (elem) => {
-    return active === elem.path.split("/")[1];
+    return sidebarItem === elem.path.split("/")[1];
   };
+
+  useEffect(() => {}, [sidebarItem]);
+
   return (
     <aside className="sidebar">
       <header className="sidebar__header">
         <h3 className="text-2xl font-bold">
-          <span className="text-blue-500">Dash</span>
-          Stack
+          <span className="text-blue-500">Nexus</span>
+          Node
         </h3>
       </header>
 
