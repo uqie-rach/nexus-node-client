@@ -35,12 +35,10 @@ const Dashboard = () => {
   }, []);
 
   useEffect(() => {
-    window.addEventListener('beforeunload', () => {
-      alert('fff')
-    })
+    window.addEventListener("beforeunload", () => {
+      alert("fff");
+    });
   }, []);
-
-  
 
   const fetchSemesterData = () => {
     try {
@@ -55,8 +53,8 @@ const Dashboard = () => {
   };
 
   /**
-   * 
-   * @param {string} value 
+   *
+   * @param {string} value
    */
   const handleChangeSemester = (value) => {
     try {
@@ -89,9 +87,9 @@ const Dashboard = () => {
   };
 
   /**
-   * 
-   * @param {string} field 
-   * @param {string} value 
+   *
+   * @param {string} field
+   * @param {string} value
    */
   const changeFilterRules = (field, value) => {
     setFilterRules((prevState) => ({
@@ -189,6 +187,8 @@ const Dashboard = () => {
           <Card
             className="shadow-tremor-card w-1/4 flex flex-col gap-4  animate-slideUp"
             key={i}
+            decoration="top"
+            decorationColor="slate"
           >
             <div className="flex flex-col-reverse xl:flex-row gap-4 justify-between">
               <div>
@@ -226,7 +226,11 @@ const Dashboard = () => {
       <br />
 
       {/* Chart */}
-      <Card className="animate-slideUp">
+      <Card
+        className="animate-slideUp"
+        decoration="top"
+        decorationColor="slate"
+      >
         <h3 className="text-lg font-bold text-tremor-content-strong dark:text-dark-tremor-content-strong">
           GPA per Semester
         </h3>
@@ -245,7 +249,11 @@ const Dashboard = () => {
 
       <br />
       {/* Table */}
-      <Card className="animate-slideUp">
+      <Card
+        className="animate-slideUp"
+        decoration="top"
+        decorationColor="slate"
+      >
         <div className="flex justify-between mb-4 items-center flex-wrap gap-4">
           {/* Card title */}
           <h3 className="text-lg font-bold text-tremor-content-strong dark:text-dark-tremor-content-strong">
@@ -253,7 +261,11 @@ const Dashboard = () => {
           </h3>
 
           {/* See details */}
-          <Link to="/subjects" className="flex items-center gap-2 animate-bounce" onClick={() => updateSidebarItem('subjects')}>
+          <Link
+            to="/subjects"
+            className="flex items-center gap-2 animate-bounce"
+            onClick={() => updateSidebarItem("subjects")}
+          >
             <Icon icon={RiArrowRightDoubleFill} />
           </Link>
         </div>
