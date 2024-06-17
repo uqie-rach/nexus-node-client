@@ -1,6 +1,5 @@
 import { Button } from "@tremor/react";
 
-import { Dashboard, NotFound, Product } from "./pages";
 import AppRoutes from "./routes";
 
 import "./App.css";
