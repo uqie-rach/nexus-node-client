@@ -5,7 +5,7 @@ export const AppContext = createContext();
 export const AuthContextProvider = ({ children }) => {
   // States
   const [sidebarItem, setSidebarItem] = useState(
-    JSON.parse(localStorage.getItem("sidebar")) || null
+    window.location.pathname.split("/")[1]
   );
 
   // Functions
@@ -14,9 +14,7 @@ export const AuthContextProvider = ({ children }) => {
   };
 
   // Effects
-  useEffect(() => {
-    localStorage.setItem("sidebar", JSON.stringify(sidebarItem));
-  }, [sidebarItem]);
+  useEffect(() => {}, [sidebarItem, window.location.pathname.split("/")[1]]);
 
   return (
     <AppContext.Provider value={{ sidebarItem, updateSidebarItem }}>

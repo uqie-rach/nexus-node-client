@@ -2,7 +2,7 @@
 import colors from "tailwindcss/colors";
 
 export default {
-  darkMode: 'class',
+  darkMode: "class",
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -14,6 +14,15 @@ export default {
     transparent: "transparent",
     current: "currentColor",
     extend: {
+      keyframes: {
+        slideUp: {
+          "0%": { opacity: "0", transform: "translateY(30%)" },
+          "100%": { opacity: "1", transform: "translateY(0%)" },
+        },
+      },
+      animation: {
+        slideUp: "slideUp 350ms ease-in-out forwards",
+      },
       colors: {
         // light mode
         tremor: {
