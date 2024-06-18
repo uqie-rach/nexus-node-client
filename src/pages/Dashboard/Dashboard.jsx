@@ -207,7 +207,7 @@ const Dashboard = () => {
             </div>
 
             <Link
-              to={item.path}
+              to={`/${item.path}`}
               className="flex justify-between items-center"
               onClick={() => updateSidebarItem(item.path)}
             >
