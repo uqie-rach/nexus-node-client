@@ -187,8 +187,6 @@ const Dashboard = () => {
           <Card
             className="shadow-tremor-card w-1/4 flex flex-col gap-4  animate-slideUp"
             key={i}
-            decoration="top"
-            decorationColor="slate"
           >
             <div className="flex flex-col-reverse xl:flex-row gap-4 justify-between">
               <div>
@@ -228,8 +226,8 @@ const Dashboard = () => {
       {/* Chart */}
       <Card
         className="animate-slideUp"
-        decoration="top"
-        decorationColor="slate"
+        decoration="right"
+        decorationColor="blue"
       >
         <h3 className="text-lg font-bold text-tremor-content-strong dark:text-dark-tremor-content-strong">
           GPA per Semester
@@ -251,8 +249,8 @@ const Dashboard = () => {
       {/* Table */}
       <Card
         className="animate-slideUp"
-        decoration="top"
-        decorationColor="slate"
+        decoration="right"
+        decorationColor="blue"
       >
         <div className="flex justify-between mb-4 items-center flex-wrap gap-4">
           {/* Card title */}
